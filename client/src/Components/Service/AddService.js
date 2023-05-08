@@ -1,134 +1,7 @@
-// import React, { Component } from 'react';
-// import axios from 'axios';
-// import swal from 'sweetalert';
-// import './Navbar/ServiceNavbar';
-// import logo from './Images/logo.JPG'
-
-
-// export default class AddService extends Component {
-
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             fName: "",
-//             lName: "",
-//             address: "",
-//             nic: "",
-//             phone: "",
-//             email: "",
-//             gender: "",
-//             job: "",
-//             position: ""
-//         }
-//     }
-
-//     handleInputChange = (e) => {
-//         const { name, value } = e.target;
-
-//         this.setState({
-//             ...this.state,
-//             [name]: value
-//         })
-//     }
-
-//     btnDemo = (e) => {
-//         e.preventDefault();
-
-//         const { fName, lName, address, nic, phone, email, gender, job, position } = this.state;
-
-//         const data = {
-
-//             fName: fName,
-//             lName: lName,
-//             address: address,
-//             nic: nic,
-//             phone: phone,
-//             email: email,
-//             gender: gender,
-//             job: job,
-//             position: position
-
-//         }
-//         console.log(data)
-
-//         this.setState(
-//             {
-//                 fName: "kamal",
-//                 lName: "liyanagama",
-//                 address: "43/1,kalidasa road matara",
-//                 nic: "200133002366",
-//                 phone: "0786537261",
-//                 email: "kamal@gmail.com",
-//                 gender: "Male",
-//                 job: "doctor",
-//                 position: "senior"
-
-//             }
-//         )
-
-//     }
-
-//     onSubmit = (e) => {
-//         e.preventDefault();
-
-//         const { fName, lName, address, nic, phone, email, gender, job, position } = this.state;
-
-//         const data = {
-//             fName: fName,
-//             lName: lName,
-//             address: address,
-//             nic: nic,
-//             phone: phone,
-//             email: email,
-//             gender: gender,
-//             job: job,
-//             position: position
-//         }
-
-//         console.log(data)
-
-//         const ph = /^[0-9\b]+$/;
-//         const emi = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-//         if ((!ph.test(String(phone))) || (phone.length != 10)) {
-//             swal("Invalid Contact Number !", "contact number should be valid pattern", "error");
-//         } else if ((!emi.test(String(email)))) {
-//             swal("Invalid email address !", "Please enter valid email address", "error");
-//         } else if (fName.length === 0 || lName.length === 0 || address.length === 0 ||
-//             nic.length === 0 || phone.length === 0 || email.value === 0 ||
-//             gender.length === 0 || job.length === 0 || position.length === 0) {
-//             swal("Please fill all the details")
-//         } else {
-
-//             axios.post("http://localhost:8000/service/save", data).then((res) => {
-//                 let path = "/serviceDash";
-//                 if (res.data.success) {
-//                     alert("Details Saved Successfully")
-//                     this.props.history.push(path);
-//                     this.setState(
-//                         {
-//                             fName: "",
-//                             lName: "",
-//                             address: "",
-//                             nic: "",
-//                             phone: "",
-//                             email: "",
-//                             gender: "",
-//                             job: "",
-//                             position: ""
-//                         }
-//                     )
-//                 }
-//             })
-//         }
-//     }
-//     render() {
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import swal from 'sweetalert';
 import './Navbar/ServiceNavbar';
-import logo from './Images/logo.JPG'
 
 export default function AddService(props) {
     const [formData, setFormData] = useState({
@@ -144,11 +17,6 @@ export default function AddService(props) {
     });
 
     const handleInputChange = (e) => {
-        // const { name, value } = e.target;
-        // setFormData({
-        //     ...formData,
-        //     [name]: value,
-        // });
         setFormData({
             ...formData,
             [e.target.name]: e.target.value,

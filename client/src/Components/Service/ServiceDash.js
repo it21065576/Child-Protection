@@ -38,39 +38,6 @@ const ServiceDash = () => {
         setQuery(e.target.value)
     }
 
-    // const filterData = (services, searchKey) => {
-    //     console.log(services);
-    //     const result = services.filter((service) =>
-    //         service.phone.includes(searchKey) ||
-    //         service.fName.toLowerCase().includes(searchKey) ||
-    //         service.fName.includes(searchKey) ||
-    //         service.lName.toLowerCase().includes(searchKey) ||
-    //         service.lName.includes(searchKey) ||
-    //         service.address.toLowerCase().includes(searchKey) ||
-    //         service.email.toLowerCase().includes(searchKey) ||
-    //         service.job.toLowerCase().includes(searchKey) ||
-    //         service.position.toLowerCase().includes(searchKey) ||
-    //         service.address.includes(searchKey) ||
-    //         service.email.includes(searchKey) ||
-    //         service.job.includes(searchKey) ||
-    //         service.position.includes(searchKey) ||
-    //         service.description.toLowerCase().includes(searchKey) ||
-    //         service.description.includes(searchKey)
-    //     );
-
-    //     setServices(result);
-    // }
-
-    // const handleSearchArea = (e) => {
-    //     const searchKey = e.currentTarget.value;
-
-    //     if (searchKey !== '') {
-    //         filterData(allServices, searchKey);
-    //     } else {
-    //         setServices(allServices);
-    //     }
-    // }
-
     return (
         <>
 
